@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="__container">
+                <div class="menu">
+                    <div class="menu_left">
+                        <img class="menu_logo" src="images/logo.png">
+                    </div>
+
+                    <div class="menu_right">
+                        <img class="menu_logo" src="images/menu.png">
+                    </div>
+                </div>
+
+                <div class="header">
+                    <div class="logo">
+                        <img class="logo_img" src="images/close.png">
+                    </div>
+                    <img class="header_logo" src="images/logo.png">
+                    <h1 class="header_title">Оформить заказ</h1>
+                    <p class="header_discription">Сделайте заказ письменного перевода<br>в Бюро переводов</p>
+                </div>
+
+                <form>
+                    <div class="form_listbox">
+                        <select>
+                            <option disabled selected value>Язык оригинала</option>
+                            <option>Английский</option>
+                            <option>Японский</option>
+                            <option>Французский</option>
+                            <option>Украинский</option>
+                            <option>Немецкий</option>
+                        </select>
+
+                        <select>
+                            <option disabled selected value>Язык перевода:</option>
+                            <option>Английский</option>
+                            <option>Японский</option>
+                            <option>Французский</option>
+                            <option>Украинский</option>
+                            <option>Немецкий</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form_radio">
+                        <label class="form_text">Срочность:</label>
+                        <div class="form_rbtn">
+                            <input class="form_radio_el" type="radio" name="delivery" value="fast">Срочный заказ
+                            <input class="form_radio_el" type="radio" name="delivery" value="default">Стандартные сроки
+                        </div>
+                        
+                    </div>
+
+                    <div class="textarea">
+                        <textarea class="form_textarea" placeholder="Описание заказа"></textarea>
+                    </div>
+
+                    <div class="form_file">
+                        
+                    </div>
+
+                    <div class="form_info">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <input type="tel" name="telephone" placeholder="Телефон" required>
+                        <input type="text" name="company" placeholder="Название компании">
+                    </div>
+
+                    <div class="form_btn">
+                        <button class="btn">Оформить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

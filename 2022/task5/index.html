@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="box">
+            <!-- <form> -->
+                <fieldset>
+                    <div class="string">
+                        <span class="string_txt">Second Name</span>
+                        <input type="text" id="second_name" placeholder="Input Your Second Name" class="input" required>
+                    </div>
+
+                    <div class="string">
+                        <span class="string_txt">First Name</span>
+                        <input type="text" id="first_name" placeholder="Input Your First Name" class="input" required>
+                    </div>
+
+                    <div class="string">
+                        <span class="string_txt">Email</span>
+                        <input type="email" id="email" placeholder="Input Your eMail" class="input" required>
+                    </div>
+
+                    <div class="string"> 
+                        <span class="string_txt">Phone Number</span>                   
+                        <input type="tel" id="telephone" placeholder="8(999)999-99-99" class="input" required>                    
+                    </div>
+
+                    <div class="string"> 
+                        <span class="string_txt">Address</span>                   
+                        <input type="text" id="address" placeholder="Input Your Address" class="input" required>                    
+                    </div>
+
+                    <div class="string_list">
+                        <span class="string_txt __list">Choose Your Country</span> 
+                        <select id="country" class="" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option>Белорусь</option>
+                            <option>Грузия</option>
+                            <option>Россия</option>
+                            <option>Украина</option>
+                            <option>Казахстан</option>
+                        </select>
+                    </div>
+
+                    <div class="string_list">
+                        <span class="string_txt __list">Choose Your Job</span> 
+                        <select id="job" class="i" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option>Программист</option>
+                            <option>Менеджер</option>
+                            <option>SSM</option>
+                            <option>Big Data Science</option>
+                            <option>AI</option>
+                        </select>
+                    </div>
+
+                    <div class="radio">
+                        <div class="radio_el"><input type="radio" name="sex" value="Male" required>Male</div> 
+                        <div class="radio_el"><input type="radio" name="sex" value="Female">Female</div>
+                    </div>
+                </fieldset>
+
+                <div class="form_for_btn">
+                    <button class="form_btn">Check</button>
+                </div>
+            <!-- </form> -->
+            <div id="block"></div>
+        </div>
+    </body>
+    <script src="code.js"></script>
+</html>

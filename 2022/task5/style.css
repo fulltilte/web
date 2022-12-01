@@ -1,0 +1,114 @@
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+* {
+    margin: 0;
+    font-family: arial, sans-serif;
+}
+
+#box {
+    background: lightgreen;
+    width: 500px;
+    margin: 40px auto;
+    border: 1px solid darkgreen;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 0;
+    /*border-top: 1px solid darkgreen;*/
+    border-bottom: 1px solid darkgreen;
+}
+
+select {
+    outline: 0;
+    border: 1px solid darkgreen;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    margin: 5px 60px;
+}
+
+.input {
+    border: 1px solid darkgreen;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.form_for_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.form_btn {
+    width: 100px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid darkgreen;
+    background-color: white;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.radio {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.radio_el {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.radio input {
+    margin-right: 5px;
+}
+
+.string {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.string_txt {
+    width: 25%;
+}
+
+.input {
+    width: 200px;
+}
+
+.input:focus{
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.string_list {
+    display: flex;
+    flex-direction: column;
+} 
+
+.__list {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.block p {
+    margin-bottom: 10px;
+}
+
+.valid {
+    border-color: green;
+}
+
+.invalid {
+    background: red;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="card">
+            <div class="card_header">
+                <h1>Введите данные банковской карты</h1>
+                <img src="">
+                <img src="">
+            </div>
+
+            <div class="card_number">
+                <p class="card_text">Номер карты</p>
+
+                <fieldset class="card_numer_f1">
+                    <div class="card_number_item">
+                        <input type="text" id="card_number1" class="input">
+                    </div>
+
+                    <div class="card_number_item">
+                        <input type="text" id="card_number2" class="input">
+                    </div>
+
+                    <div class="card_number_item">
+                        <input type="text" id="card_number3" class="input">
+                    </div>
+                        
+                    <div class="card_number_item">
+                        <input type="text" id="card_number4" class="input">
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="card_info">
+                <fieldset class="f1">
+                    <div class="card_info_name">
+                        <p class="card_text">Имя владельца</p>
+
+                        <input type="text" id="name" class="input_name">
+                    </div>
+
+                    <div class="card_info_day">
+                        <p class="card_text">Действителен до</p>
+
+                        <select id="month" class="input_data">
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+
+                        <select id="year" class="input_data">
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                        </select>
+                    </div>
+
+                    <div class="card_info_cvc">
+                        <p class="card_text">CVC</p>
+
+                        <input type="text" id="cvc" class="input_cvc">
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="card_discription">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit mollitia consequatur, distinctio pariatur, sunt vitae nihil illum, assumenda laborum, neque facere aliquid eos possimus voluptatum incidunt expedita asperiores earum! Aliquid?</p>
+            </div>
+        </div>
+
+        <div class="btn_form">
+            <button class="btn">Оплатить</button>
+        </div>
+
+        <div class="block"></div>
+
+        <div class="view_card">
+            <div class="view_card_logo">
+
+            </div>
+
+            <div class="view_card_number">
+                
+            </div>
+
+            <div class="view_card_info">
+ 
+            </div>
+        </div>
+    </body>
+    <script src="code.js"></script>
+</html>
