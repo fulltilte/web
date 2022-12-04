@@ -61,12 +61,17 @@ function printAll(){
 		}
 
 		list_table.style.display = 'block';
-
-		list_table.innerHTML = `<h2 class="list-title">GRAPH</h2>`;
-		list_table.innerHTML += showDays();
-
+		for (let i = 0; i < Tasks.length; i++)	{
+			if(!Tasks[i].completed)
+			{
+				list_table.innerHTML = `<h2 class="list-title">GRAPH</h2>`;
+				list_table.innerHTML += showDays();
+				break;
+			}
+		}
+		
 		for (let i = 0; i < Tasks.length; i++)
-		{
+		{	
 			let s = days[Tasks[i].start];
 			let t = +days[Tasks[i].end];
 			let e = t + 1;
