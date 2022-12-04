@@ -44,35 +44,35 @@ function printAll(){
 	list_complited.innerHTML = ``;
 	list_table.innerHTML = ``;
 	if(Tasks.length > 0) {
-	list_view.innerHTML = `<h2 class="list-title">MY TASKS</h2>`;
-	for (let i = 0; i < Tasks.length; i++){
-		if (!Tasks[i].completed)
-			list_view.innerHTML += showItemTask(Tasks[i], i);
-	} 
+		list_view.innerHTML = `<h2 class="list-title">MY TASKS</h2>`;
+		for (let i = 0; i < Tasks.length; i++){
+			if (!Tasks[i].completed)
+				list_view.innerHTML += showItemTask(Tasks[i], i);
+		} 
 
-	toDoTasks = document.querySelectorAll('.list-view-item-span');
-	list_view.innerHTML += `<h2 class="list-title">${count_check} ${(Tasks.length - count_check)}</h2>`;
-	list_complited.innerHTML = `<h2 class="list-title">COMPLETED</h2>`;
-	for (let i = 0; i < Tasks.length; i++){
-		if (Tasks[i].completed){
+		toDoTasks = document.querySelectorAll('.list-view-item-span');
+		list_view.innerHTML += `<h2 class="list-title">${count_check} ${(Tasks.length - count_check)}</h2>`;
+		list_complited.innerHTML = `<h2 class="list-title">COMPLETED</h2>`;
+		for (let i = 0; i < Tasks.length; i++){
+			if (Tasks[i].completed){
 
-			list_complited.innerHTML += showItemTask(Tasks[i], i);
+				list_complited.innerHTML += showItemTask(Tasks[i], i);
+			}
 		}
-	}
 
-	list_table.style.display = 'block';
+		list_table.style.display = 'block';
 
-	list_table.innerHTML = `<h2 class="list-title">GRAPH</h2>`;
-	list_table.innerHTML += showDays();
+		list_table.innerHTML = `<h2 class="list-title">GRAPH</h2>`;
+		list_table.innerHTML += showDays();
 
-	for (let i = 0; i < Tasks.length; i++)
-	{
-		let s = days[Tasks[i].start];
-		let t = +days[Tasks[i].end];
-		let e = t + 1;
-		if(!Tasks[i].completed)
-			list_table.innerHTML += showTable(Tasks[i], i, s, e);
-	}
+		for (let i = 0; i < Tasks.length; i++)
+		{
+			let s = days[Tasks[i].start];
+			let t = +days[Tasks[i].end];
+			let e = t + 1;
+			if(!Tasks[i].completed)
+				list_table.innerHTML += showTable(Tasks[i], i, s, e);
+		}
 	}
 }
 
@@ -117,6 +117,7 @@ const setDraggetIndex = (index) => {
 
 function checkBoxSelected(index){
 	Tasks[index].completed = !Tasks[index].completed;
+	localStorage.storage = JSON.stringify(Tasks);
 
 	if (Tasks[index].completed)
 	{
@@ -125,7 +126,8 @@ function checkBoxSelected(index){
 
 	else
 	{
-		count_check--;
+		if (count_check > 0)
+			count_check--;
 	}
 
 	printAll();
@@ -194,6 +196,9 @@ function deleteLocal(index) {
 function loadLocal() {
 	if(localStorage.storage != null){
 		Tasks = JSON.parse( localStorage.storage );
+		for (let i = 0; i < Tasks.length; i++)
+			if(Tasks[i].completed)
+				count_check++;
 		printAll();
 	}
 }
